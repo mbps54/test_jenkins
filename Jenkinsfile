@@ -31,12 +31,15 @@ pipeline {
             sh 'echo hello stage 2 step 4'
           }
         }
-      }
-    }
     stage('stage 3') {
-      steps {\
+      steps {
         input(message: 'Deploy to Stage', ok: 'Yes')
         sh 'echo hello stage 3 step 1'
+      }
+    }
+    stage('archiveartifacts') {
+      steps {
+        archiveArtifacts(artifacts: 'file.txt', fingerprint: true)
       }
     }
   }
