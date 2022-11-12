@@ -31,6 +31,8 @@ pipeline {
             sh 'echo hello stage 2 step 4'
           }
         }
+      }
+    }  
     stage('stage 3') {
       steps {
         input(message: 'Deploy to Stage', ok: 'Yes')
