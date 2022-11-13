@@ -4,8 +4,10 @@ pipeline {
     string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '')
   }
   stages {
-    steps {
+    stage ('Deploy'){
+      steps {
       echo "Deploying to ${DEPLOY_ENV}"
+      }
     }
   }
 }
