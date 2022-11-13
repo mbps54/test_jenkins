@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('stage  1') {
       steps {
-        sh 'echo "hello stage 1 step 1 modified" > file.txt'
+        sh 'echo "hello  stage 1 step 1 modified" > file.txt'
       }
     }
     stage(' stage 2') {
