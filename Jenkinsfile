@@ -2,8 +2,12 @@ pipeline {
   agent any
   stages {
     stage('pre check') {
+      agent any
+      environment {
+        foo = 'bar'
+      }
       steps {
-        sh 'echo \'ping 8.8.8.8 -c 2\''
+        sh 'echo \'$foo\''
         sh 'echo \'ping 9.9.9.9 -c 2\''
         sh 'echo "ping tests are completed, data is collected"'
       }
