@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('pre check') {
       steps {
-        sh '''ping 8.8.8.8 -c 2
-ping 1.1.1.1 -c 2'''
+        sh 'ping 8.8.8.8 -c 2'
         sh 'ping 9.9.9.9 -c 2'
         sh 'echo "ping tests are completed, data is collected"'
       }
