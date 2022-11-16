@@ -7,7 +7,7 @@ pipeline {
         foo = 'bar'
       }
       steps {
-        sh 'echo \'$foo\''
+        sh 'echo $foo'
         sh 'echo \'ping 9.9.9.9 -c 2\''
         sh 'echo "ping tests are completed, data is collected"'
       }
